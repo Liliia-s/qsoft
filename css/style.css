@@ -1,0 +1,650 @@
+/* БАЗОВЫЕ СТИЛИ */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 22.4px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
+  color: #768298;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* подключение классов */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/roboto-regular.woff2") format("woff2"),
+    url("../fonts/roboto-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/roboto-medium.woff2") format("woff2"),
+    url("../fonts/roboto-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/roboto-bold.woff2") format("woff2"),
+    url("../fonts/roboto-bold.woff") format("woff");
+}
+
+/* СТИЛИ ПО КЛАССАМ */
+
+/* стилизация nav-site */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 135px;
+  max-width: 1440px;
+  width: 100%;
+}
+
+@media (max-width: 1439px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+.site-header {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-site {
+  padding-top: 15px;
+}
+
+.nav-site__wrapper {
+  border-bottom: 1px solid #ebebf1;
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.user-nav__logo-link {
+  padding-right: 50px;
+}
+
+.user-nav__form-search {
+  padding-right: 50px;
+}
+
+.user-nav__search-wrapper {
+  position: relative;
+}
+
+.user-nav__search {
+  width: 660px;
+  height: 40px;
+  padding: 9px 40px 9px 20px;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.user-nav__search::placeholder {
+  color: #bbc4d6;
+}
+
+.user-nav__svg {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  z-index: 100;
+}
+
+.user-nav__phone-wrapper {
+  margin-right: auto;
+}
+
+.user-nav__phone {
+  font-size: 18px;
+  line-height: 28.8px;
+  color: #121920;
+}
+
+.user-nav__phone:hover,
+.user-nav__phone:focus {
+  color: #34aadd;
+}
+
+.user-nav__phone:active {
+  opacity: 0.5;
+}
+
+.user-nav__phone-text {
+  margin: 0;
+  color: #bbc4d6;
+}
+
+.user-nav__auth {
+  width: 100px;
+  padding: 13px 30px;
+}
+
+.btn {
+  display: block;
+  line-height: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #34aadd;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #6680ae;
+}
+
+.btn:active {
+  background-color: rgba(102, 128, 174, 0.5);
+}
+
+.btn:disabled {
+  color: #bbc4d6;
+  background-color: #ebebf1;
+}
+
+/* стилизация основной навигации menu-main */
+.menu-main__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__main-link {
+  display: block;
+  padding-top: 17px;
+  padding-right: 60px;
+  padding-bottom: 14px;
+  font-size: 18px;
+  line-height: 28.8px;
+  color: #768298;
+}
+
+.menu__main-link:hover,
+.menu__main-link:focus {
+  color: #34aadd;
+}
+
+.menu__main-link:active {
+  color: #bbc4d6;
+}
+
+.menu__main-link--red {
+  color: #f95a59;
+}
+
+/* стилизация категории товаров popular-products */
+.popular-products {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.popular-products__tittle {
+  padding-bottom: 52px;
+}
+
+.title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 57.6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #121920;
+}
+
+.popular-products__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.popular-products__item {
+  padding-bottom: 30px;
+}
+
+.popular-products__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #ebebf1;
+}
+
+.product-card__img {
+  display: block;
+}
+
+.product-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.product-card__text-wrapper {
+  padding-bottom: 5px;
+  margin-bottom: auto;
+}
+
+.product-card__name {
+  margin: 0;
+  padding-bottom: 6px;
+}
+
+.product-card__name-link {
+  font-size: 18px;
+  line-height: 25.2px;
+  font-weight: 500;
+  color: #121920;
+}
+
+.product-card__name-link:hover,
+.product-card__name-link:focus {
+  color: #34aadd;
+}
+
+.product-card__desc {
+  margin: 0;
+}
+
+.product-card__buy-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.product-card__price {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 700;
+  color: #121920;
+}
+
+.product-card__button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  background: url("../img/basket.svg")  #34aadd no-repeat 50% 50%;
+}
+
+.popular-products__catalog {
+  width: 206px;
+}
+
+.btn-more {
+  position: relative;
+  display: block;
+  padding: 18px 50px 15px 30px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #34aadd;
+  border: 1px solid #34aadd;
+  border-radius: 5px;
+}
+
+.news__svg {
+  position: absolute;
+  top: 17px;
+  right: 30px;
+}
+
+.btn-more:hover,
+.btn-more:focus {
+  color: #6680ae;
+  border-color: #6680ae;
+}
+
+.btn-more:hover svg,
+.btn-more:focus svg {
+  fill: #6680ae;
+}
+
+.btn-more:active {
+  color: rgba(102, 128, 174, 0.5);
+  border-color: rgba(102, 128, 174, 0.5);
+}
+
+.btn-more:active svg {
+  fill: rgba(102, 128, 174, 0.5);
+}
+
+.btn-more:disabled {
+  color: #bbc4d6;
+  background-color: #ebebf1;
+  border-color: #bbc4d6;
+}
+
+/* стилизация раздела с новостями news */
+.news {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f0f0f0;
+}
+
+.news__title {
+  padding-bottom: 52px;
+}
+
+.news__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news__item {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+.news__item:not(:nth-child(2n)) {
+  padding-right: 30px;
+}
+
+.news__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+.news__link:hover,
+.news__link:focus {
+  color: #121920;
+}
+
+.news__link:active {
+  opacity: 0.5;
+}
+
+.news__link--small {
+  width: 369px;
+  padding: 228px 31px 20px 20px;
+}
+
+.news__link--small:hover,
+.news__link--small:focus {
+  background-color: #ffffff;
+}
+
+.news__link--large {
+  width: 770px;
+  padding: 135px 170px 135px 50px;
+}
+
+.news__link--large:hover::before,
+.news__link--large:focus::before {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.news__link--large::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 770px;
+  height: 100%;
+}
+
+.news__link--blue {
+  background-color: #34aadd;
+}
+
+.news__link--pink {
+  background: url("../img/back-cassete.jpg") no-repeat #dbd5d2;
+}
+
+.news__link--pink::before {
+  background-color: rgba(167, 80, 123, 0.8);
+}
+
+.news__link-wrapper {
+  z-index: 100;
+}
+
+.news__link--violet {
+  background: url("../img/back-house.jpg") no-repeat #dee6fb;
+}
+
+.news__link--violet::before {
+  background-color: rgba(102, 128, 174, 0.8);
+}
+
+.news__link--red {
+  background-color: #f95a59;
+}
+
+.news__name,
+.news__desc {
+  margin: 0;
+}
+
+.news__name {
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+
+.news__name--small {
+  font-size: 18px;
+  line-height: 25.2px;
+}
+
+.news__name--large {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.news__desc--large {
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.news__button {
+  width: 234px;
+}
+
+/* стилизация раздела наши партнеры partners */
+
+.partners {
+  padding-top: 90px;
+  padding-bottom: 60px;
+}
+
+.partners__title {
+  padding-bottom: 51px;
+}
+
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.partners__item:not(:nth-child(4n)) {
+  padding-right: 30px;
+}
+
+.partners__item {
+  padding-bottom: 30px;
+}
+
+.partners__link {
+  display: flex;
+  width: 270px;
+  height: 100px;
+  border: 1px solid #ebebf1;
+  border-radius: 5px;
+}
+
+.partners__link:hover,
+.partners__link:focus {
+  background-color: #ffffff;
+  box-shadow: -3px 0 40px rgba(0, 0, 0, 0.1),
+    0 0 10px rgba(164, 164, 164, 0.03);
+}
+
+.partners__link:active {
+  opacity: 0.5;
+}
+
+.partners__img {
+  margin: auto;
+}
+
+/* стилизация футера site-footer */
+
+.site-footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #fafafa;
+}
+
+.site-footer__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.site-footer__logo {
+  display: block;
+  padding-right: 40px;
+  border-right: 1px solid rgba(187, 196, 214.1, 0.5);
+}
+
+.site-footer__logo:hover svg,
+.site-footer__logo:focus svg,
+.social__link:hover svg,
+.social__link:focus svg {
+  fill: #768298;
+}
+
+.site-footer__logo:active svg,
+.social__link:active svg {
+  opacity: 0.3;
+}
+
+.social,
+.nav-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social {
+  padding: 0 40px;
+  border-right: 1px solid rgba(187, 196, 214.1, 0.5);
+}
+
+.social__item:not(:last-child) {
+  padding-right: 25px;
+}
+
+.site-footer__nav {
+  margin-right: auto;
+}
+
+.nav-info {
+  padding-left: 40px;
+}
+
+.nav-info__item:not(:last-child) {
+  padding-right: 30px;
+}
+
+.nav-info__link {
+  display: block;
+  padding: 10px 0;
+  line-height: 14px;
+  font-weight: 500;
+  color: #34aadd;
+}
+
+.nav-info__link:hover,
+.nav-info__link:focus {
+  text-decoration: underline;
+}
+
+.nav-info__link:active {
+  opacity: 0.5;
+}
+
+.site-footer__callback {
+  position: relative;
+  width: 199px;
+  padding: 18px 30px 18px 58px;
+}
+
+.site-footer__callback::before {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 30px;
+  width: 17px;
+  height: 17px;
+  background: url("../img/phone.svg") no-repeat;
+}
