@@ -1,3 +1,5 @@
-# qsoft
+# QSOFT
 
-https://liliia-s.github.io/qsoft/
+Тестовое задание от компании QSOFT
+
+**Онлайн-версия:** https://liliia-s.github.io/qsoft/
